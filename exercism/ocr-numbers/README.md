@@ -1,4 +1,4 @@
-# Ocr Numbers
+ # Ocr Numbers
 
 Given a 3 x 4 grid of pipes, underscores, and spaces, determine which number is represented, or whether it is garbled.
 
@@ -39,10 +39,10 @@ Update your program to recognize multi-character binary strings, replacing garbl
 Update your program to recognize all numbers 0 through 9, both individually and as part of a larger string.
 
 ```
- _ 
+ _
  _|
-|_ 
-   
+|_
+
 ```
 
 Is converted to "2"
@@ -61,18 +61,18 @@ Is converted to "1234567890"
 Update your program to handle multiple numbers, one per line. When converting several lines, join the lines with commas.
 
 ```
-    _  _ 
+    _  _
   | _| _|
   ||_  _|
-         
-    _  _ 
-|_||_ |_ 
+
+    _  _
+|_||_ |_
   | _||_|
-         
- _  _  _ 
+
+ _  _  _
   ||_||_|
   ||_| _|
-         
+
 ```
 
 Is converted to "123,456,789"
