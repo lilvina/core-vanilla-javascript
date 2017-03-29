@@ -7,67 +7,67 @@ describe('Bowling', function() {
       expect(new Bowling(rolls).score()).toEqual(0);
     });
 
-    xit('should be able to score a game with all open frames', function() {
+    it('should be able to score a game with all open frames', function() {
       var rolls = [3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6];
       expect(new Bowling(rolls).score()).toEqual(90);
     });
 
-    xit('a spare followed by zeros is worth ten points', function() {
+    it('a spare followed by zeros is worth ten points', function() {
       var rolls = [6, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
       expect(new Bowling(rolls).score()).toEqual(10);
     });
 
-    xit('points scored in the roll after a spare are counted twice', function() {
+    it('points scored in the roll after a spare are counted twice', function() {
       var rolls = [6, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
       expect(new Bowling(rolls).score()).toEqual(16);
     });
 
-    xit('consecutive spares each get a one roll bonus', function() {
+    it('consecutive spares each get a one roll bonus', function() {
       var rolls = [5, 5, 3, 7, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
       expect(new Bowling(rolls).score()).toEqual(31);
     });
 
-    xit('should allow fill ball when the last frame is a spare', function() {
+    it('should allow fill ball when the last frame is a spare', function() {
       var rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 3, 7];
       expect(new Bowling(rolls).score()).toEqual(17);
     });
 
-    xit('a strike earns ten points in a frame with a single roll', function() {
+    it('a strike earns ten points in a frame with a single roll', function() {
       var rolls = [10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
       expect(new Bowling(rolls).score()).toEqual(10);
     });
 
-    xit('points scored in the two rolls after a strike are counted twice as a bonus', function() {
+    it('points scored in the two rolls after a strike are counted twice as a bonus', function() {
       var rolls = [10, 5, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
       expect(new Bowling(rolls).score()).toEqual(26);
     });
 
-    xit('should be able to score multiple strikes in a row', function() {
+    it('should be able to score multiple strikes in a row', function() {
       var rolls = [10, 10, 10, 5, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
       expect(new Bowling(rolls).score()).toEqual(81);
     });
 
-    xit('should allow fill balls when the last frame is a strike', function() {
+    it('should allow fill balls when the last frame is a strike', function() {
       var rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 7, 1];
       expect(new Bowling(rolls).score()).toEqual(18);
     });
 
-    xit('rolling a spare with the two roll bonus does not get a bonus roll', function() {
+    it('rolling a spare with the two roll bonus does not get a bonus roll', function() {
       var rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 7, 3];
       expect(new Bowling(rolls).score()).toEqual(20);
     });
 
-    xit('strikes with the two roll bonus do not get bonus rolls', function() {
+    it('strikes with the two roll bonus do not get bonus rolls', function() {
       var rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 10];
       expect(new Bowling(rolls).score()).toEqual(30);
     });
 
-    xit('a strike with the one roll bonus after a spare in the last frame does not get a bonus', function() {
+    it('a strike with the one roll bonus after a spare in the last frame does not get a bonus', function() {
       var rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 3, 10];
       expect(new Bowling(rolls).score()).toEqual(20);
     });
 
-    xit('should be able to score a perfect game', function() {
+    it('should be able to score a perfect game', function() {
       var rolls = [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10];
       expect(new Bowling(rolls).score()).toEqual(300);
     });
